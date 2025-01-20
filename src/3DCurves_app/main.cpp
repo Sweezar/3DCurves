@@ -58,8 +58,9 @@ int main() {
   // Заполнение второго массива с окружностями
   std::vector<std::shared_ptr<Circle>> circles;
   for (const auto& curve : curves) {
-    if (curve->getType() == CurveType::Circle) {
-      circles.push_back(std::dynamic_pointer_cast<Circle>(curve));
+    std::shared_ptr<Circle> circle = std::dynamic_pointer_cast<Circle>(curve);
+    if(circle) {
+      circles.push_back(circle);
     }
   }
 

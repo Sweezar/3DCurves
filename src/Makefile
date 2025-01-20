@@ -16,7 +16,6 @@ LIB_NAME = curves
 LIB = lib$(LIB_NAME).so
 LIB_DIR = 3DCurves_lib
 
-
 # Правила сборки
 all: lib_build $(APP)
 
